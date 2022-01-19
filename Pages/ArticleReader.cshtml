@@ -1,0 +1,32 @@
+﻿@page
+@model ArticleReaderModel
+@{
+
+     ViewData["Title"] = "Article";
+
+    var book = (Article)ViewData["articlepassed"];
+}
+<h1><span class="badge badge-secondary">@book.ArticleType</span>
+<h1>@book.Title</h1>
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6" >
+      <img src='~/Photos/@book.Photo' style="max-width: 100%;"  width="500" height="450">
+     
+      
+    </div>
+    <div class="col-sm-6" >
+      <h5 class ="arti">@book.Subtitle </h5>
+      <h5 class ="arti">@book.MainBody </h6>
+      <h5 class ="arti">@book.Paragraph </h6>
+      <p>this satirical fake news article was written my the esteemed journalist uga matungamatung</p>
+    <a href='@book.PhotoLicence'>click here to see the common licence of this photograph</a>
+
+    </div>
+    
+  </div>
+  
+</div> 
+
